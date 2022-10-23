@@ -417,6 +417,11 @@ ev_year_fig.layout.coloraxis.colorbar = {'title': 'Number of EVs',
 
 
 app.layout = html.Div(children=[
+    html.Div([
+        html.Title(children='''
+            California Prop 30
+        ''')
+    ]),
     # All elements from the top of the page
     html.Div([
         html.H1(children='Hydrogen Refueling'),
@@ -439,20 +444,24 @@ app.layout = html.Div(children=[
         html.H1(children='EV Purchased by Year'),
 
         html.Div(children='''
-            Dash: A web application framework for Python.
+            Interactive Bar Graph for EVs Purchased
         '''),
 
         dcc.Graph(
             id='graph2',
             figure=fig2
-        ),  
+        ),
+        
+        html.P(
+            'Although the earliest modern EV was sold in the late 1990s, EVs purchases started to rise in 2011. Areas with higher population density and higher median income like Los Angeles buys more EVs than other counties. The sharp increase in EV purchases in 2021 and 2022 signals the growing popularity of EVs over gas cars.'
+        ),
     ]),
     
         html.Div([
         html.H1(children='Percentage of EVs Purchased'),
 
         html.Div(children='''
-            Dash: A web application framework for Python.
+            Total Breakdown of EVs Purchased by County
         '''),
 
         dcc.Graph(
@@ -465,39 +474,51 @@ app.layout = html.Div(children=[
         html.H1(children='All EV Chargers'),
 
         html.Div(children='''
-            Dash: A web application framework for Python.
+            Chargers in California
         '''),
 
         dcc.Graph(
             id='graph4',
             figure=all_fig
-        ),  
+        ),
+            
+        html.P(
+            'Southern California and the Bay Area are EV Charger leaders by far serving the majority of EV owners in the state. A potential benefit of passing Prop30 would be the acquisition of more publicly owned EV chargers. Currently the state leading counties have over ninety-percent of the EV chargers as private entitites which are subject to the private sectors ruling. If Prop30 is withheld however,  it may allow the private sector to benefit more and generate more taxable income that would benefit the state. Private networks may cost more but,  in return they need less maintenance since there is less wear and tire on the infrastructure and allows for faster charging since it is limited to  those individuals who have access to that particular private network. Public networks may allow for more potential users but, it slows the charging speeds down substantially since the chargers would be pulling more power.'
+        ),
     ]),
     
         html.Div([
         html.H1(children='Chargers Heat Map'),
 
         html.Div(children='''
-            Dash: A web application framework for Python.
+            Map of Chargers in California
         '''),
 
         dcc.Graph(
             id='graph5',
             figure=charger_fig
-        ),  
+        ),
+            
+        html.P(
+            'Locations such as Los Angeles and San Bernardino has much more chargers than other counties. This aligns with the visuals above since the two places has much more EVs than other counties. It appears that a county might have more chargers if more residents there own an EV.'
+        )
     ]),   
     
         html.Div([
         html.H1(children='EVs Heat Map'),
 
         html.Div(children='''
-            Dash: A web application framework for Python.
+            Click the play button at the bottom to see EVs over time
         '''),
 
         dcc.Graph(
             id='graph6',
             figure=ev_year_fig
-        ),  
+        ),
+            
+        html.P(
+            'Starting in 2010, there is a massive increase in EVs purchased. Overtime, all counties increased their EV purchases, especially counties with bigger populations.'
+        )
     ]),    
 ])
 
