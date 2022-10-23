@@ -25,6 +25,7 @@ import math
 
 app = d.Dash(__name__, external_stylesheets=[dbc.themes.QUARTZ])
 server = app.server
+app.title = 'California 2022 Election Prop 30' 
 
 
 # In[ ]:
@@ -417,9 +418,6 @@ ev_year_fig.layout.coloraxis.colorbar = {'title': 'Number of EVs',
 
 
 app.layout = html.Div(children=[
-    html.Div([
-        html.Title(children='California Prop 30')
-    ]),
     # All elements from the top of the page
     html.Div([
         html.H1(children='Hydrogen Refueling'),
