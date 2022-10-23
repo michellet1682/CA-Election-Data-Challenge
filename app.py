@@ -418,9 +418,7 @@ ev_year_fig.layout.coloraxis.colorbar = {'title': 'Number of EVs',
 
 app.layout = html.Div(children=[
     html.Div([
-        html.Title(children='''
-            California Prop 30
-        ''')
+        html.Title(children='California Prop 30')
     ]),
     # All elements from the top of the page
     html.Div([
