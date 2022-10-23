@@ -24,6 +24,7 @@ import math
 
 
 app = d.Dash(__name__, external_stylesheets=[dbc.themes.QUARTZ])
+server = app.server
 
 
 # In[ ]:
