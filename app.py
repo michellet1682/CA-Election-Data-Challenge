@@ -418,6 +418,12 @@ ev_year_fig.layout.coloraxis.colorbar = {'title': 'Number of EVs',
 
 
 app.layout = html.Div(children=[
+    html.Div(
+        className="app-header",
+        children=[
+            html.Div('California 2022 Election Prop 30', className="app-header--title")
+        ]
+    ),    
     # All elements from the top of the page
     html.Div([
         html.H1(children='Hydrogen Refueling'),
